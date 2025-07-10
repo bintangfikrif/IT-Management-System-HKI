@@ -1,0 +1,41 @@
+# Log & temp files
+*.log
+*.tmp
+*.bak
+~$*
+
+# VSCode settings
+.vscode/
+
+# Node modules 
+node_modules/
+
+# PAC CLI auth & config 
+pac-auth.json
+pac-config.json
+
+# Ignore exported ZIP file
+*.zip
+
+# Power Apps Canvas
+CanvasApps/**/*.msapp
+CanvasApps/**/*.meta.xml
+CanvasApps/*/src/*_diag.xml
+CanvasApps/*/src/*_debug.json
+CanvasApps/*/src/.userdata/
+CanvasApps/*_BackgroundImageUri
+CanvasApps/*_DocumentUri.*
+
+# Ignore environment/secret file
+.env
+.env.local
+.env.*
+
+# OS system files
+Thumbs.db
+.DS_Store
+
+# Other files
+Other/Solution.xml
+
+

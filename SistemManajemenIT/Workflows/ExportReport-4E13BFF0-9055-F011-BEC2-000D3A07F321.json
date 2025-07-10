@@ -1,0 +1,127 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_powerbi": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedpowerbi_958eb"
+        },
+        "api": {
+          "name": "shared_powerbi"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedoffice365_10591"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "0a129887-95d0-4d72-913d-1b87080adf24"
+          },
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "EmailPenerima",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_1": {
+                  "title": "NamaPenerima",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text",
+                "text_1"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Export_To_File_for_Power_BI_Reports": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "863ae7d3-ea00-4b7f-8b5a-5c8bb2f5cf97"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_powerbi",
+              "operationId": "InitiateExportToFileForPbiReports",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_powerbi"
+            },
+            "parameters": {
+              "groupid": "8fe1af5d-a6e4-4fb2-9b0f-ff63623fa134",
+              "reportid": "4c504d70-c03a-42cf-9450-a66f1f3693c2",
+              "ExportPayloadPowerBIReport/format": "PDF"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Send_an_email_(V2)": {
+          "runAfter": {
+            "Export_To_File_for_Power_BI_Reports": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c40124b0-8aee-4804-8598-7fcfce611bb4"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "@triggerBody()['text']",
+              "emailMessage/Subject": "Laporan Dashboard Sistem IT",
+              "emailMessage/Body": "<p>Halo, @{triggerBody()['text_1']}.<br>\n<br>\nBerikut adalah laporan terbaru dari dashboard Sistem Manajemen IT. Apabila ada pertanyaan lebih lanjut dapat menemui admin.<br>\n<br>\nTerima kasih.</p>",
+              "emailMessage/Attachments": [
+                {
+                  "Name": "IT-Dashboard-Report.pdf",
+                  "ContentBytes": "@body('Export_To_File_for_Power_BI_Reports')"
+                }
+              ],
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

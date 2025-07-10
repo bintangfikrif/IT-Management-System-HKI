@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>bfg_sistemmanajemenit_c6c5c</Name>
+  <AppVersion>2025-07-07T01:33:04Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.25064.3.0</CreatedByClientVersion>
+  <MinClientVersion>3.25064.3.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.25064.3","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20250704T015519Z-3.25064.3.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>Sistem Manajemen IT</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[{"resourceId":"powerbi"}]</AuthorizationReferences>
+  <ConnectionReferences>{"96914ca2-44fc-411c-9b14-bb7c2738ba38":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1752/1.0.1752.4216/logicflows/icon.png","dataSources":["PowerAppV2-&gt;Refreshadataset"],"dependencies":["55e30416-e160-4cb0-917e-ff4c1674659d"],"dependents":[],"parameterHints":{"workflowName":{"value":"649c0959-d64b-4860-8796-d1906c54916c"},"workflowEntityId":{"value":"b854faf7-5755-f011-bec2-000d3a07f321"},"workflowDisplayName":{"value":"PowerAppV2 -&gt; Refresh a dataset"},"55e30416-e160-4cb0-917e-ff4c1674659d":{"value":"shared_powerbi"}},"parameterHintsV2":{"workflowName":{"value":"649c0959-d64b-4860-8796-d1906c54916c"},"workflowEntityId":{"value":"b854faf7-5755-f011-bec2-000d3a07f321"},"workflowDisplayName":{"value":"PowerAppV2 -&gt; Refresh a dataset"},"shared_powerbi":{"value":"55e30416-e160-4cb0-917e-ff4c1674659d"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]},"55e30416-e160-4cb0-917e-ff4c1674659d":{"id":"/providers/microsoft.powerapps/apis/shared_powerbi","displayName":"Power BI","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1756/1.0.1756.4248/powerbi/icon.png","dataSources":[],"dependencies":[],"dependents":["96914ca2-44fc-411c-9b14-bb7c2738ba38","b68d7e63-c83d-484e-bdc4-cb0f2ecd4453"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"},"b1ccb8c6-90b6-4c7a-a7f9-7a7eb88be766":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1754/1.0.1754.4231/sharepointonline/icon.png","dataSources":["Bandwith_Monitoring","Wifi_Usage","Ranking Drone","Monitoring_User","Maturity_Apps","Cyber_Attack","UserRole","Program TI"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"https://pthkinfrastruktur.sharepoint.com/sites/SistemManajemenIT":{"dataSources":{"Bandwith_Monitoring":{"tableName":"3a2bfe80-aeca-4c26-a97d-bbdc7be20dad"},"Wifi_Usage":{"tableName":"b5bf9b93-85d4-4ee1-ac0d-caa7c326e636"},"Ranking Drone":{"tableName":"2faad894-2b84-419a-8a33-aa6d1102b2a3"},"Monitoring_User":{"tableName":"027bad18-4555-4b0e-8711-1a05a9ef2941"},"Maturity_Apps":{"tableName":"da07563b-3f4d-414a-b940-234970597952"},"Cyber_Attack":{"tableName":"8daa7a6f-75b0-4251-918f-8d88a9c0de11"},"UserRole":{"tableName":"c89d9231-e2a9-45f2-a916-4e386ebb2fe1"},"Program TI":{"tableName":"4d82d162-ec2e-416a-ade9-91a18cc85192"}}}},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read","providers/PowerPlatform.Governance/Operations/Write","providers/PowerPlatform.Governance/Operations/Delete"]},"b68d7e63-c83d-484e-bdc4-cb0f2ecd4453":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1752/1.0.1752.4216/logicflows/icon.png","dataSources":["ExportReport"],"dependencies":["55e30416-e160-4cb0-917e-ff4c1674659d","2c6d4505-5072-44c2-a26c-9244f1fe469e"],"dependents":[],"parameterHints":{"workflowName":{"value":"9208027b-cc8f-4814-9e65-c176ea53f8ae"},"workflowEntityId":{"value":"4e13bff0-9055-f011-bec2-000d3a07f321"},"workflowDisplayName":{"value":"Export Report"},"55e30416-e160-4cb0-917e-ff4c1674659d":{"value":"shared_powerbi"},"2c6d4505-5072-44c2-a26c-9244f1fe469e":{"value":"shared_office365"}},"parameterHintsV2":{"workflowName":{"value":"9208027b-cc8f-4814-9e65-c176ea53f8ae"},"workflowEntityId":{"value":"4e13bff0-9055-f011-bec2-000d3a07f321"},"workflowDisplayName":{"value":"Export Report"},"shared_powerbi":{"value":"55e30416-e160-4cb0-917e-ff4c1674659d"},"shared_office365":{"value":"2c6d4505-5072-44c2-a26c-9244f1fe469e"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]},"2c6d4505-5072-44c2-a26c-9244f1fe469e":{"id":"/providers/microsoft.powerapps/apis/shared_office365","displayName":"Office 365 Outlook","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1757/1.0.1757.4253/office365/icon.png","dataSources":[],"dependencies":[],"dependents":["b68d7e63-c83d-484e-bdc4-cb0f2ecd4453"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"b854faf7-5755-f011-bec2-000d3a07f321","componenttype":29,"componenttypeplatformname":"Workflow"},{"dependencyid":"4e13bff0-9055-f011-bec2-000d3a07f321","componenttype":29,"componenttypeplatformname":"Workflow"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/bfg_sistemmanajemenit_c6c5c_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/bfg_sistemmanajemenit_c6c5c_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/bfg_sistemmanajemenit_c6c5c_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>
