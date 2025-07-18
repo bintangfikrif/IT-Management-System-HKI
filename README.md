@@ -19,32 +19,52 @@ Aplikasi ini bertujuan untuk menggantikan proses input manual menggunakan Excel 
 
 ## 🚀 Fitur Utama
 
-- 📥 **Input Form Data** – Admin dapat menginput data aktivitas IT secara digital.
-- 📄 **View Form Data** – User dapat melihat data yang telah diinput melalui interface Power Apps.
-- 📊 **Dashboard Power BI** – Visualisasi data aktivitas secara interaktif dan real-time langsung di Power Apps.
-- 👤 **Manajemen User** – Role-based access untuk admin dan user internal.
+- **Input Form Data** – Admin dapat menginput data aktivitas IT secara digital.
+- **View Form Data** – User dapat melihat data yang telah diinput melalui interface Power Apps.
+- **Dashboard Power BI** – Visualisasi data aktivitas secara interaktif dan real-time langsung di Power Apps.
+- **Manajemen User** – Role-based access untuk admin dan user internal.
+- **Ekspor Laporan** - Ekspor langsung laporan dashboard Power-BI ke email user.
 
 ---
 
 ## 🔧 Teknologi yang Digunakan
 
 - **Power Apps Canvas** – Untuk membangun antarmuka input & view data.
-- **Power Automate** – Untuk mengotomatiskan alur data dan notifikasi.
+- **Power Automate** – Untuk mengotomatiskan refresh Power BI & Ekspor Laporan via Email.
 - **Power BI Tile** – Untuk menampilkan visualisasi langsung di dalam Power Apps.
 - **SharePoint List** – Sebagai penyimpanan data utama.
 
 ---
 
-## 🖼️ Screenshots
+## 🖼️ Screenshots Tampilan Aplikasi
 
-> *()*  
+>**Tampilan Home**
+><br><img src="Media/hki-home.jpg" width="170">
 
+>**Tampilan Dashboard Admin**
+>|Dashboard Home|Manage User|
+>|--------------|-----------|
+>|<img src="Media/hki-admdashboard.jpg" width="170">|<img src="Media/hki-useraccess.jpg" width="170">|
+
+>**Manage User**
+>|Add New User|User Detail|User Full Info|
+>|------------|-----------|-------|
+>|<img src="Media/hki-addnewuser.png" width="170">| <img src="Media/hki-userdetail.jpg" width ="170">|<img src="Media/hki-userdetaildetail.png" width="170">
+
+>**Submit Form**
+>|Form Menu|Add New Data|
+>|---------|------------|
+>|<img src="Media/hki-formmenu.png" width=170>|<img src="Media/hki-submitdetailform.png" width=170>
+
+>**View Report**
+>|View Form Menu|Form Detail|Form Full Info|
+>|-------------|--------|---------|
+>|<img src="Media/hki-formmenu.png">|<img src="Media/hki-detailform.png">|<img src="Media/hki-detaildetailpage.png">
+
+>**Dashboard Analytics**
+><br><img src="Media/hki-analytics.png" width=170>
 
 ---
-
-## 🎥 Demo
-
-> *()*  
 
 
 ---
